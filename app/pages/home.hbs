@@ -1,0 +1,58 @@
+<div class="row" style="display: flex;">
+  <div class="col s12">
+    <table class="highlight">
+      <tr>
+        <th>Название Акции</th>
+        <th style="text-align:center">Цена</th>
+        <th style="text-align:center">Количество</th>
+        <th style="text-align:center">Див.Доходность</th>
+        <th style="text-align:center">Кол-во выплат в год</th>
+        <th style="text-align:center">Суммарная стоимость</th>
+      </tr>
+      {{#each stocks}}
+        <tr>
+          <td><a href="/editInfo/{{_id}}"><b>{{title}}</b></a></td>
+          <td style="text-align:center">{{price}}</td>
+          <td style="text-align:center">{{items}}</td>
+          <td style="text-align:center">{{costDiv}}</td>
+          <td style="text-align:center">{{divDohInYear}}</td>
+          <td style="text-align:center">{{summ}}</td>
+        </tr>
+      {{/each}}
+    </table>
+  </div>
+  <div class="col s5">
+    <div class="card-panel teal right">
+      <span class="white-text">
+        <h6 style='text-align: center;'>Итоговая информация</h6>
+        <hr>
+        <table>
+          <tr>
+            <th>
+              Стоимость портфеля:
+            </th>
+            <td>
+              {{Sum}} руб
+            </td>
+          </tr>
+          <tr>
+            <th>
+              Годовая Доходность:
+            </th>
+            <td>
+              10000 руб
+            </td>
+          </tr>
+           <tr>
+            <th>
+              Сумма 
+            </th>
+            <td>
+              10000 руб
+            </td>
+          </tr>
+        </table>
+      </span>
+    </div>
+  </div>
+</div>

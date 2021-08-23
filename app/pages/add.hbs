@@ -1,0 +1,40 @@
+<h3>Добавить Акцию</h3>
+<form action="/add" method="POST">
+  <div class="input-field">
+    <input id="title" name="title" type="text" class="validate" required />
+    <label for="title">Название акции</label>
+    <span class="helper-text" data-error="Введите название"></span>
+  </div>
+
+  <div class="input-field">
+    <input id="price" name="price" />
+    <label for="price">Стоимость акции</label>
+    <span class="helper-text" data-error="Введите стоимость"></span>
+  </div>
+
+  <div class="input-field">
+    <input id="items" name="items" type="number" />
+    <label for="items">Кол-во</label>
+    <span class="helper-text" data-error="Введите кол-во"></span>
+  </div>
+
+  <div class="input-field">
+    <input id="minItems" name="minItems" type="number" />
+    <label for="minItems">Мин. кол-во лота</label>
+    <span class="helper-text" data-error="Введите мин. кол-во лота"></span>
+  </div>
+
+  <div class="input-field">
+    <input id="costDiv" name="costDiv" />
+    <label for="costDiv">Див.Доходность</label>
+    <span class="helper-text" data-error="Введите Цену Дивидендов"></span>
+  </div>
+
+  <div class="input-field">
+    <input id="divDohInYear" name="divDohInYear" type="number" />
+    <label for="divDohInYear">Див.Доходность в год</label>
+    <span class="helper-text" data-error="Введите Див.Доходность в год"></span>
+  </div>
+
+  <button class="btn btn-primary">Добавить в портфель</button>
+</form>

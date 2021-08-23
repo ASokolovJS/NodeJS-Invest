@@ -1,0 +1,93 @@
+<div class="row">
+  <div style="display: flex;">
+    <div class="col offset-s3 s6 center">
+      <div class="card teal">
+          <div class="card-content white-text">
+            <form action="/oneYear/invest" method="POST">
+              <input
+                style="width: 40%;"
+                name="invest"
+                value="5000"
+                placeholder="Введите сумму инвестиций"
+              />
+              <input type="hidden" name="title" value="{{lastNumberYear}}" />
+              <input type="hidden" name="months" value={{month}} />
+              <button class="btn">Ок</button>
+            </form>
+            <span>Общая сумма инвестирования: {{allSummYear}} руб.</span>
+          </div>
+      </div>
+    </div>
+    <div class="card-panel teal right">
+      <span class="white-text">
+        <h6 style="text-align: center;">Итоговая информация</h6>
+        <hr />
+        <table>
+          <tr>
+            <th>
+              Кол-во лет инвестирования:
+            </th>
+            <td>
+              {{lastNumberYear}}
+            </td>
+          </tr>
+          <tr>
+            <th>
+              Годовая Доходность:
+            </th>
+            <td>
+              {{fullDiv}} руб({{divInProc}} %)
+            </td>
+          </tr>
+          <tr>
+            <th>
+              Сумма инвестиций
+            </th>
+            <td>
+              {{allSum}} руб
+            </td>
+          </tr>
+        </table>
+      </span>
+    </div>
+  </div>
+  <div class="col s12">
+    {{#each year}}
+      <table class="highlight centered">
+        <thead>
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th>{{numberYear}} Год</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <thead>
+          <tr>
+            <th>Месяц</th>
+            <th>Наименование</th>
+            <th>Цена</th>
+            <th>Кол-во</th>
+            <th>Годовая Див.Доходность</th>
+            <th>Дата покупки</th>
+            <th>Сумма инвестирования</th>
+          </tr>
+        </thead>
+        {{#each months}}
+          <tr>
+            <td>{{numberMonth}} Месяц</td>
+            <th>{{titleStock}}</th>
+            <td>{{costSumStock}} руб.</td>
+            <td>{{itemsStock}} шт.</td>
+            <td>{{divident}} руб.</td>
+            <td>{{dateBuy}}</td>
+            <td>{{sumInvest}} руб.</td>
+          </tr>
+        {{/each}}
+      </table>
+    {{/each}}
+  </div>
+</div>
