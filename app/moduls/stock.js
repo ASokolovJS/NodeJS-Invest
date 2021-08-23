@@ -4,21 +4,11 @@ const stock = new Schema({
     type: String,
     required: true,
   },
-  price: {
-    type: Number,
-  },
-  items: {
-    type: Number,
-  },
-  minItems: {
-    type: Number,
-  },
-  costDiv: {
-    type: Number,
-  },
-  divDohInYear: {
-    type: Number,
-  },
+  price: Number,
+  items: Number,
+  minItems: Number,
+  сostDiv: Number,
+  divDohInYear: Number,
   summ: String,
 });
 

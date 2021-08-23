@@ -26,7 +26,7 @@ router.get("/", async (req, res) => {
       return (total += +year.costSumStock);
     }, 0);
   }
-   function monthq(){
+   function getLastNumberMonth(year){
     if(year.length !== 0){
       if(lastYear.months.length == 0){
         return 0
@@ -40,7 +40,7 @@ router.get("/", async (req, res) => {
   }
   const year = await Year.find();
   let lastYear = year[year.length - 1];
-  let month = monthq(year)
+  let month = getLastNumberMonth(year)
   let lastNumberYear = year.length !== 0 ? lastYear.numberYear : 0
 
   if(year.length == 0){

@@ -3,26 +3,15 @@ const {Schema, model, SchemaTypes} = require('mongoose')
 const tempbd  = new Schema({
   title: {
     type: String,
-    required: true
+    required: true,
   },
-  price: {
-    type: Number,
-  },
-  items: {
-    type: Number,
-  },
-  minItems: {
-    type: Number
-  },
-  costDiv: {
-    type: Number,
-  },
-  divDohInYear: {
-    type: Number,
-  },
-  summ: String
-
-})
+  price: Number,
+  items: Number,
+  minItems: Number,
+  сostDiv: Number,
+  divDohInYear: Number,
+  summ: String,
+});
 
 
 
