@@ -2,7 +2,7 @@ const { Router } = require("express");
 const Stock = require('../moduls/stock');
 const router = Router();
 
-function allSumm(stocks){
+function getallSumm(stocks){
   return stocks.reduce((total, stocks) => {
     return total += +stocks.summ
   }, 0)
@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
   res.render("home",{
     title: 'Инвестиционный портфель',
     stocks,
-    Sum: allSumm(stocks).toFixed(2)
+    Sum: getallSumm(stocks).toFixed(2)
   });
 });
 

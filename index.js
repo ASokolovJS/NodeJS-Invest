@@ -8,8 +8,9 @@ const homeRout = require('./app/routs/home')
 const addRout = require('./app/routs/add');
 const editInfo = require('./app/routs/editInfo');
 const oneYear = require('./app/routs/oneYear');
-
 const app = express();
+
+
 app.use(express.urlencoded({extended: true}));
 const hbs = Handlebars.create({
   defaultLayout: "main",

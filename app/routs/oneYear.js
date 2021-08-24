@@ -107,10 +107,12 @@ router.post("/invest", async (req, res) => {
     }else{ 
       return (tempbd[idx].items + getItem(tempbd)) * tempbd[idx].costDiv * tempbd[idx].divDohInYear
     }
-    }
+  }
+  
   const stocks = await Stocks.find();
   const tempbd = await TEMPBD.find();
   const year = await Year.find();
+
   let lastYear = year[year.length - 1];
   let bals = 0;
   let arr = tempbd.map((arrs) => {
